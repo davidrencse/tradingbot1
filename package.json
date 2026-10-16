@@ -1,0 +1,37 @@
+{
+  "name": "dislocation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Binance triangular-arbitrage scanner with paper/live execution and a real-time dashboard",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "npm run build && node server/index.js",
+    "engine": "node server/index.js",
+    "dev:engine": "node --watch server/index.js",
+    "dev:web": "vite --config web/vite.config.ts",
+    "build": "vite build --config web/vite.config.ts",
+    "typecheck": "tsc -p web/tsconfig.json --noEmit",
+    "test": "node --test server/engine.test.js",
+    "bench": "node server/bench.js"
+  },
+  "dependencies": {
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/barlow-semi-condensed": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "lightweight-charts": "^4.2.3",
+    "lucide-react": "^1.57.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "ws": "^8.22.0"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "typescript": "^5.9.3",
+    "vite": "^5.4.21"
+  }
+}
